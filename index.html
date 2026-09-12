@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анализ TikTok</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Аналитик TikTok</h1>
+    <div class="sub">Загрузите ZIP-архив с вашими данными TikTok — всё анализируется прямо в браузере и никуда не отправляется.</div>
+  </header>
+
+  <div id="drop" class="dropzone">
+    <div class="dz-ico">📦</div>
+    <div class="dz-text">
+      Перетащите ZIP сюда<br>
+      <label class="file-btn">или выберите файл
+        <input id="file" type="file" accept=".zip,application/zip,application/x-zip-compressed" hidden>
+      </label>
+    </div>
+  </div>
+
+  <div id="status" class="status" hidden></div>
+  <div id="summary"></div>
+  <div id="report"></div>
+
+  <footer>
+    Проект не собирает ваши данные ·
+    <a href="https://github.com/lunawebru/TikTok-Analyzer" target="_blank" rel="noopener">исходный код</a> ·
+    <a href="https://tiktok.lunaweb.ru" target="_blank" rel="noopener">tiktok.lunaweb.ru</a>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="analyze.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
